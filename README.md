@@ -20,7 +20,7 @@ No **VSCode** devem ser instaladas as seguintes extensões:
 > - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 
 
-Após a instalação das extensões obrigatórias, deve ser adicionadas as seguintes configurações:
+Após a instalação das extensões obrigatórias, deve ser adicionadas as seguintes configurações na pasta .vscode/arquivo.json:
 
 **>Preferences: Open Settings (JSON)**
 
