@@ -45,3 +45,35 @@ Para construir e executar o aplicativo, execute o comando:
 ```
 npm start
 ```
+
+
+Para configurar o vscode settings.json
+```
+{
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git-autoconfig.configList": [
+    {
+      "user.email": "valentim.koniarski@hotmail.com",
+      "user.name": "valentimkoniarski"
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[vue]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+
+  "eslint.format.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
+```
+
