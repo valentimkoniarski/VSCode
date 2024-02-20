@@ -48,7 +48,7 @@ npm start
 
 
 Para configurar o vscode settings.json
-```
+```json
 {
   "git.enableSmartCommit": true,
   "git.autofetch": true,
