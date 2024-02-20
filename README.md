@@ -77,3 +77,56 @@ Para configurar o vscode settings.json
 }
 ```
 
+### Para usar o modo debug criar uma pasta na raiz do projeto .vscode > launch.json
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch brave",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "/usr/bin/google-chrome",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/src/*"
+      }
+    }
+  ]
+}
+
+
+// ---------- com testes unitarios ----------
+
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+            "name": "Debug Jest Tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "test:debug"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "timeout": 30000
+        },
+		{
+			"name": "Run dev Debugger",
+			"request": "launch",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run", "dev:debug"],
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node",
+			"console": "integratedTerminal"
+		}
+	],
+	"compounds": []
+}
+
+```
+
